@@ -85,6 +85,6 @@ flyctl scale show -a huerta-db
 > Se deben tener `N` volúmenes si se desean persistir los datos: https://fly.io/docs/reference/scaling/#anchor-scaling
 
 ## Archivos adicionales:
-- `fly.toml`: archivo usado para construir la aplicación.
-- `Dockerfile`: archivo usado para construir la imagen de docker.
+- [`fly.toml`](fly.toml): archivo usado para construir la aplicación.
+- [`Dockerfile`](Dockerfile): archivo usado para construir la imagen de docker.
 

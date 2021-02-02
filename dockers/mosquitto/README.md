@@ -18,8 +18,8 @@ flyctl init huerta-mqtt --dockerfile --port 1883 --org personal
 ```
 
 Crear un archivo de password para mosquitto con:
-- usuario: admin-mqtt
-- clave: carolina
+- usuario: xxx
+- clave: yyy
 
 ```
 mosquitto_passwd -c ./passwd huerta-mqtt
@@ -51,6 +51,7 @@ Crear un volumen para mosquitto:
 ```
 flyctl volumes create mosquitto_data --region lhr
 ```
+> se puede elegir otras regiones: https://fly.io/docs/reference/regions/
 
 En el archivo fly.toml agregar:
 
@@ -100,14 +101,15 @@ Para definir una red interna y usar el descubrimiento de instancias mediante el 
 En una consola ejecutar:
 
 ```
-mosquitto_sub -L mqtts://admin-mqtt:carolina@huerta-mqtt.fly.dev:10000/# --cafile certs/rootCA.pem
+mosquitto_sub -L mqtts://xxx:yyy@huerta-mqtt.fly.dev:10000/# --cafile certs/rootCA.pem
 ```
 
 En otra ejecutar y escribir el texto a publicar mediante MQTT:
 
 ```
-mosquitto_pub -L mqtts://admin-mqtt:carolina@huerta-mqtt.fly.dev:10000/tests --cafile certs/rootCA.pem  -l
+mosquitto_pub -L mqtts://xxx:yyy@huerta-mqtt.fly.dev:10000/tests --cafile certs/rootCA.pem  -l
 ```
+Considere reemplazar `xxx` e `yyy` por el usuario y clave definido previamente.
 
 ## Detener el sistema
 
@@ -118,6 +120,7 @@ flyctl suspend huerta-mqtt
 ```
 
 ## Archivos adicionales:
-- `fly.toml`: archivo usado para construir la aplicación.
-- `Dockerfile`: archivo usado para construir la imagen de docker.
+- [`fly.toml`](fly.toml): archivo usado para construir la aplicación.
+- [`Dockerfile`](Dockerfile): archivo usado para construir la imagen de docker.
+
 
