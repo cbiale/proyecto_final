@@ -8,7 +8,7 @@ El proyecto corresponde al trabajo final de la *Especialización en Internet de 
 
 Para ejecutar la aplicación se deben crear las aplicaciones que se encuentran en el directorio `dockers`.
 
-Los archivos `.toml` configuran las aplicaciones en fly.io.
+Los archivos `.toml` configuran las aplicaciones en [fly.io](https://fly.io).
 
 Los archivos `Dockerfile` permiten configurar como se van a construir las imágenes de docker.
 
