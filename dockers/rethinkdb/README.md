@@ -1,6 +1,7 @@
 # Base de datos Rethinkdb
 
 > Temporalmente para ver la base de datos corriendo ingrese a: https://huerta-db.fly.dev/
+> 
 > A futuro la base no va a tener conexión con el exterior.
 
 ## Pasos realizados
