@@ -17,3 +17,7 @@ Para comprender lo que se realiza es recomendable leer los archivos `README.md` 
 Hasta el momento se ha configurado en fly.io las siguientes aplicaciones:
 - Servidor Mosquitto.
 - Base de datos Rethinkdb *(con archivo .sh para crear un cluster al escalar la cantidad de instancias)*.
+
+Se encuentra en proceso de desarrollo el sitio web que funciona con:
+- fastifyJs
+- NuxtJs
