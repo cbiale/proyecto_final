@@ -17,5 +17,10 @@ Socket.io
 https://github.com/alemagio/fastify-socket.io
 https://github.com/fastify/fastify-jwt
 
+TailwindCSS
+
+https://bluuweb.github.io/tailwindcss/01-fundamentos/#vista-rapida
+https://tailblocks.cc/
+
 
 
