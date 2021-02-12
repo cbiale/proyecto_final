@@ -19,5 +19,6 @@ Hasta el momento se ha configurado en fly.io las siguientes aplicaciones:
 - Base de datos Rethinkdb *(con archivo .sh para crear un cluster al escalar la cantidad de instancias)*.
 
 Se encuentra en proceso de desarrollo el sitio web que funciona con:
-- fastifyJs
-- NuxtJs
+- Fastify (https://www.fastify.io/)
+- Svelte (https://svelte.dev/)
+- Routify (https://routify.dev/)
