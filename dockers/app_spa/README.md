@@ -32,6 +32,7 @@ Obtenido de [https://github.com/andrasbacsai/svelte-fastify-starter](https://git
 - ABM de usuarios
 - Manejo de init
 - Listado de mediciones
+- Dashboard
 - Listado de logs
 - Mapa de dispositivos **[finalizado] [prueba superada]**
 - MQTT backend
