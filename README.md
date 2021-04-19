@@ -14,5 +14,5 @@ Hasta el momento se han configurado las siguientes aplicaciones:
 - Servidor MQTT en Cluster VerneMQ (https://vernemq.com/).
 - Cluster de base de datos CouchDB (https://couchdb.apache.org/).
 - Backend escalable usando Fastify (https://www.fastify.io/).
-- Frontend usando Svelte (https://svelte.dev/) y Routify (https://routify.dev/).
+- Frontend usando Svelte (https://svelte.dev/), Routify (https://routify.dev/) y tailwindcss (https://tailwindcss.com/).
 - Balanceador de carga usando Traefik (https://traefik.io/traefik/).
