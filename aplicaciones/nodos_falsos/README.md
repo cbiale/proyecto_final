@@ -18,5 +18,4 @@ Para obtener el número de versión del aplicativo se debe invocar a: `node nodo
 - yargs (https://yargs.js.org/)
 - round10 (https://github.com/jhohlfeld/round10#readme)
 
-# Licencia
 

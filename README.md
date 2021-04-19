@@ -2,7 +2,7 @@
 
 # Introducción
 
-El proyecto corresponde al trabajo final de la *Especialización en Internet de las Cosas* dictada en la *Facultad de Ingeniería* de la *Universidad de Buenos Aires*.
+El proyecto denominado **Huerta-IoT** corresponde al trabajo final de la *Especialización en Internet de las Cosas* dictada en la *Facultad de Ingeniería* de la *Universidad de Buenos Aires*.
 
 # Instrucciones
 
@@ -16,3 +16,8 @@ Hasta el momento se han configurado las siguientes aplicaciones:
 - Backend escalable usando Fastify (https://www.fastify.io/).
 - Frontend usando Svelte (https://svelte.dev/), Routify (https://routify.dev/) y tailwindcss (https://tailwindcss.com/).
 - Balanceador de carga usando Traefik (https://traefik.io/traefik/).
+
+# Licencia
+
+**Huerta-IoT** tiene la licencia MIT. Consulte la (LICENCIA)[LICENSE] como referencia.
+
