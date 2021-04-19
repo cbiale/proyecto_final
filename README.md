@@ -6,19 +6,13 @@ El proyecto corresponde al trabajo final de la *Especialización en Internet de 
 
 # Instrucciones
 
-Para ejecutar la aplicación se deben crear las aplicaciones que se encuentran en el directorio `dockers`.
-
-Los archivos `.toml` configuran las aplicaciones en [fly.io](https://fly.io).
-
-Los archivos `Dockerfile` permiten configurar como se van a construir las imágenes de docker.
+Para ejecutar en local como un stack de `Docker Swarm` se deben ejecutar `...`.
 
 Para comprender lo que se realiza es recomendable leer los archivos `README.md` de cada aplicación.
 
-Hasta el momento se ha configurado en fly.io las siguientes aplicaciones:
-- Servidor Mosquitto.
-- Base de datos Rethinkdb *(con archivo .sh para crear un cluster al escalar la cantidad de instancias)*.
-
-Se encuentra en proceso de desarrollo el sitio web que funciona con:
-- Fastify (https://www.fastify.io/)
-- Svelte (https://svelte.dev/)
-- Routify (https://routify.dev/)
+Hasta el momento se han configurado las siguientes aplicaciones:
+- Servidor MQTT en Cluster VerneMQ (https://vernemq.com/).
+- Cluster de base de datos CouchDB (https://couchdb.apache.org/).
+- Backend escalable usando Fastify (https://www.fastify.io/).
+- Frontend usando Svelte (https://svelte.dev/) y Routify (https://routify.dev/).
+- Balanceador de carga usando Traefik (https://traefik.io/traefik/).

@@ -1,0 +1,80 @@
+version: '3'
+
+services:
+    # https://clouding.io/hc/es/articles/360010289760-Traefik-Docker-Swarm
+    # https://hackernoon.com/running-a-couchdb-2-0-cluster-in-production-on-aws-with-docker-50f745d4bdbc
+    # https://gist.github.com/redgeoff/5099f46ae63acbd8da1137e2ed436a7c
+    # https://clouding.io/hc/es/articles/360010289760-Traefik-Docker-Swarm
+    # https://www.npmjs.com/package/pbkdf2
+    # https://sleeplessbeastie.eu/2020/03/13/how-to-generate-password-hash-for-couchdb-administrator/
+    # https://ssarcandy.tw/2021/01/26/setup-couchdb-using-docker-swarm/
+    # https://github.com/vernemq/docker-vernemq
+    # https://dockerswarm.rocks/
+    
+    # Traefik y couchdb
+    # https://github.com/tiangolo/full-stack-flask-couchdb/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/docker-compose.deploy.labels.yml
+
+    # Vernemq y Traefik 2
+    # https://gist.github.com/dacturne/80f09adc83080cd3b17eacf22baaf968
+    # https://stackoverflow.com/questions/55880773/is-it-possible-to-load-balance-mqtt-traffic-with-traefik-2-0-tcp-feature
+
+    traefik:
+      image: traefik:v2.1
+      ports:
+        - "80:80"
+        - "1883:1883"        
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /dev/random:/dev/random
+        - ./traefik.toml:/traefik.toml
+      deploy:
+        placement:
+          constraints: [node.role == manager]
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=net
+        - traefik.http.routers.dashboard.rule=Host(`traefik.home.gtheofilis.com`)
+        - traefik.http.routers.dashboard.entrypoints=http
+        - traefik.http.routers.dashboard.service=api@internal
+        - traefik.http.services.dashboard.loadbalancer.server.port=9999
+
+    vmq0:
+      image: vernemq/vernemq
+      environment:
+        DOCKER_VERNEMQ_SWARM: 1
+        DOCKER_VERNEMQ_ACCEPT_EULA: "yes"
+    vmq:
+      image: vernemq/vernemq
+      depends_on:
+      - vmq0
+      environment:
+        DOCKER_VERNEMQ_SWARM: 1
+        DOCKER_VERNEMQ_DISCOVERY_NODE: vmq0
+        DOCKER_VERNEMQ_ACCEPT_EULA: "yes"
+      deploy:
+        replicas: 2
+    
+    # servidor de base de datos (couchdb)
+    couchdb:
+        image: apache/couchdb:3
+        hostname: couchdb
+        environment:
+        - COUCHDB_USER=admin
+        - COUCHDB_PASSWORD=admin
+        deploy:
+          replicas: 3
+        ports: 
+        - 5984:5984
+        networks:
+        - backend
+
+    # back-end (usando fastify)
+
+
+    # front-end (usando svelte)
+
+networks:
+  backend:
+    driver: overlay
+
+

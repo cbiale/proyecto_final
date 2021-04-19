@@ -1,0 +1,63 @@
+{
+  "name": "svelte-fastify-starter",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=production node api/index",
+    "dev:server": "nodemon -w api api/index",
+    "dev": "run-p dev:routify dev:svite dev:server",
+    "dev:routify": "routify run",
+    "dev:svite": "svite",
+    "build": "run-s build:routify build:svite",
+    "build:routify": "routify run -b",
+    "build:svite": "svite build"
+  },
+  "dependencies": {
+    "@roxi/routify": "^2.7.3",
+    "argon2": "^0.27.1",
+    "async-mqtt": "^2.6.1",
+    "axios": "^0.21.1",
+    "chart.js": "^2.9.4",
+    "cuid": "^2.1.8",
+    "dayjs": "^1.10.4",
+    "dotenv": "^8.2.0",
+    "fastify": "^3.9.1",
+    "fastify-autoload": "^3.4.2",
+    "fastify-cors": "^5.2.0",
+    "fastify-couchdb": "^0.2.0",
+    "fastify-env": "^2.1.0",
+    "fastify-jwt": "^2.3.0",
+    "fastify-plugin": "^3.0.0",
+    "fastify-sensible": "^3.1.0",
+    "fastify-static": "^3.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "leaflet": "^1.7.1",
+    "lodash": "^4.17.21",
+    "path": "^0.12.7",
+    "pino-pretty": "^4.5.0",
+    "rethinkdb": "^2.4.2",
+    "svelte-leafletjs": "^0.5.0",
+    "svelte-simple-datatables": "^0.1.25",
+    "under-pressure": "^5.6.0",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.35",
+    "postcss-import": "^12.0.1",
+    "postcss-load-config": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "svelte": "^3.29.7",
+    "svelte-hmr": "^0.11.6",
+    "svelte-preprocess": "^4.6.1",
+    "svite": "latest",
+    "tailwindcss": "compat"
+  },
+  "keywords": [
+    "svelte",
+    "routify",
+    "fastify"
+  ],
+  "description": "Svelte (with Svite), Tailwind, Routify and Fastify backend starter template."
+}
