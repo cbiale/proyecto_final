@@ -11,9 +11,9 @@ Para ejecutar en local como un stack de `Docker Swarm` se deben ejecutar `...`.
 Para comprender lo que se realiza es recomendable leer los archivos `README.md` de cada aplicación.
 
 Hasta el momento se han configurado las siguientes aplicaciones:
-- Servidor MQTT en Cluster VerneMQ (https://vernemq.com/).
+- Cluster MQTT VerneMQ (https://vernemq.com/).
 - Cluster de base de datos CouchDB (https://couchdb.apache.org/).
-- Backend escalable usando Fastify (https://www.fastify.io/).
+- Backend escalable usando fastify (https://www.fastify.io/).
 - Frontend usando Svelte (https://svelte.dev/), Routify (https://routify.dev/) y tailwindcss (https://tailwindcss.com/).
 - Balanceador de carga usando Traefik (https://traefik.io/traefik/).
 
