@@ -1,5 +1,5 @@
 /varios
-.vscode
+**/.vscode/
 /local
 /imagenes
 /aplicaciones/nodos_falsos/node_modules
