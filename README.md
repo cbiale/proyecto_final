@@ -19,5 +19,5 @@ Hasta el momento se han configurado las siguientes aplicaciones:
 
 # Licencia
 
-**Huerta-IoT** tiene la licencia MIT. Consulte la (LICENCIA)[LICENSE] como referencia.
+**Huerta-IoT** está licenciado con la licencia MIT. Consulte la [LICENCIA](LICENSE) como referencia.
 
