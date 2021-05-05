@@ -1,0 +1,11 @@
+sensor
+
+lee nodo -> transmite MQTT -> Almacena backend en DB
+
+Actuador (Tiempo)
+
+Tiempo se carga por REST -> Backend manda mensaje MQTT al nodo -> Almacena en DB -> Nodo manda log a backend
+
+Actuador (Se controla cambio)
+
+Backend manda mensaje MQTT al nodo -> Nodo manda log a backend

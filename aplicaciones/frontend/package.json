@@ -1,0 +1,71 @@
+{
+  "name": "Huerta-IoT-Frontend",
+  "version": "1.0.0",
+  "description": "Frontend de Huerta-IoT",
+  "author": "Claudio Omar Biale",
+  "license": "MIT",
+  "@comments scripts": {
+    "dev": "develop with blazing fast rebuilds",
+    "dev:features": "develop with features like SSR and serviceworker enabled",
+    "build": "run build scripts below",
+    "build:app": "build single page application (SPA)",
+    "build:static": "Generate static pages",
+    "serve": "serve content in 'dist' folder",
+    "rollup": "run the rollup bundler",
+    "nollup": "run the nollup no-bundler",
+    "routify": "run routify"
+  },
+  "scripts": {
+    "dev": "run-p routify nollup",
+    "dev:ssr": "run-p routify rollup",
+    "build": "run-s build:*",
+    "build:app": "routify -b && rollup -c",
+    "build:static": "spank",
+    "serve": "spassr --ssr",
+    "rollup": "rollup -cw",
+    "nollup": "nollup -c",
+    "routify": "routify"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@roxi/routify": "^2.12.4",
+    "cross-env": "^7.0.2",
+    "fs-extra": "^9.0.1",
+    "nollup": "^0.13.13",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.10",
+    "postcss-import": "^13.0.0",
+    "rollup": "^2.33.1",
+    "rollup-plugin-hot": "^0.1.1",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-svelte": "^6.1.0",
+    "rollup-plugin-svelte-hot": "^0.11.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-workbox": "^5.2.1",
+    "spank": "^1.5.1",
+    "spassr": "^2.2.0",
+    "svelte": "^3.29.4",
+    "svelte-preprocess": "^4.5.2",
+    "tossr": "^1.3.1"
+  },
+  "routify": {
+    "extensions": "svelte,html,svx,md"
+  },
+  "spassr": {},
+  "spank": {
+    "blacklist": []
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.6",
+    "axios": "^0.21.1",
+    "dayjs": "^1.10.4",
+    "leaflet": "^1.7.1",
+    "postcss-purgecss": "^2.0.3",
+    "svelte-leafletjs": "^0.6.1",
+    "svelte-simple-datatables": "^0.1.25",
+    "tailwindcss": "^2.1.1",
+    "yup": "^0.32.9"
+  }
+}

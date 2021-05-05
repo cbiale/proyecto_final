@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+  # Servidor MQTT (vernemq)
+    vmq0:
+      image: vernemq/vernemq
+      environment:
+        DOCKER_VERNEMQ_SWARM: 1
+        DOCKER_VERNEMQ_ACCEPT_EULA: 'yes'
+        DOCKER_VERNEMQ_ALLOW_ANONYMOUS: 'on'
+        DOCKER_NET_INTERFACE: eth1
+      networks:
+        - huerta_iot_net
+
+    vmq:
+      image: vernemq/vernemq
+      ports:
+        - 1883:1883
+        - 8888:8888
+      environment:
+        DOCKER_VERNEMQ_SWARM: 1
+        DOCKER_VERNEMQ_DISCOVERY_NODE: vmq0
+        DOCKER_VERNEMQ_ACCEPT_EULA: 'yes'
+        DOCKER_VERNEMQ_ALLOW_ANONYMOUS: 'on'
+        DOCKER_NET_INTERFACE: eth1
+      deploy:
+        replicas: 2
+      networks:
+        - huerta_iot_net
+
+networks:
+  huerta_iot_net:
+    external: true

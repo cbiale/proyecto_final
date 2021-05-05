@@ -1,0 +1,41 @@
+version: '3.7'
+
+services:
+    # servidor de base de datos (couchdb)
+    couchdb:
+      image: apache/couchdb:3
+      environment:
+        COUCHDB_USER: "admin"
+        COUCHDB_PASSWORD: -pbkdf2-ec6f84b04adce620e9d10512c8a5af9c4fe8379f,8a3bfe04b1f4294d89d9e9d250fce77a,10
+        COUCHDB_SECRET: 46d689495ca02e8c35c3a3f683000ef1
+        NODENAME: "{{.Service.Name}}.{{.Task.Slot}}"
+        ERL_FLAGS: "-setcookie a20b37d83ef18efce400b3ace400036e"
+      volumes:
+      - couchdb-data:/opt/couchdb/data
+      ports:
+      - 5984:5984
+      #deploy:
+      # mode: global
+      networks:
+      - huerta_iot_net
+
+networks:
+  huerta_iot_net:
+    external: true
+
+volumes:
+  couchdb-data:
+    name: '{{.Service.Name}}-{{.Task.Slot}}-vol'
+
+# manejo del cluster
+# https://docs.couchdb.org/en/stable/cluster/nodes.html
+
+# curl -X GET "http://<setup-coordination-node>:5984/_membership" --user admin-user
+
+# agregar
+# curl -X PUT "http://<setup-coordination-node>/_node/_local/_nodes/node2@yyy.yyy.yyy.yyy" -d {}
+# Verificar instalacion:
+# curl http://admin:password@<setup-coordination-node>:5984/_cluster_setup
+
+# Ver miembros:
+# curl http://admin:password@<setup-coordination-node>:5984/_membership

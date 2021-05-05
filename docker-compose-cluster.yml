@@ -1,0 +1,55 @@
+version: '3.3'
+
+services:
+    vmq0:
+      image: vernemq/vernemq
+      ports: 
+      - 8888:8888
+      environment:
+        DOCKER_VERNEMQ_SWARM: 1
+        DOCKER_VERNEMQ_ACCEPT_EULA: "yes"
+      deploy:
+        placement:
+          constraints: [node.role == manager]
+
+    vmq:
+      image: vernemq/vernemq
+      depends_on:
+      - vmq0
+      ports: 
+      - 8888:8888
+      environment:
+        DOCKER_VERNEMQ_SWARM: 1
+        DOCKER_VERNEMQ_DISCOVERY_NODE: vmq0
+        DOCKER_VERNEMQ_ACCEPT_EULA: "yes"
+      deploy:
+        replicas: 2
+    
+    # servidor de base de datos (couchdb)
+    couchdb:
+        image: apache/couchdb:3
+        hostname: couchdb
+        environment:
+        - COUCHDB_USER: admin
+        - COUCHDB_PASSWORD: admin
+        volumes:
+        - couchdb-data:/opt/couchdb/data
+        deploy:
+          replicas: 3
+        ports: 
+        - 5984:5984
+        networks:
+        - net
+
+    # back-end (usando fastify)
+
+
+    # front-end (usando svelte)
+
+networks:
+  net:
+    driver: overlay
+
+volumes:
+  couchdb-data:
+

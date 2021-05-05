@@ -1,5 +1,5 @@
 printf -- "> Huerta-IoT\n\n"
 printf -- "----------------------------------------------------------------------------\n"
-printf -- "Descargando Portainer...\n"
-curl -L https://downloads.portainer.io/portainer-agent-stack.yml -o portainer-agent-stack.yml
+printf -- "Creando stack...\n"
+docker stack deploy -c portainer-agent-stack.yml portainer
 printf -- "----------------------------------------------------------------------------\n"
