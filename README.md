@@ -6,16 +6,25 @@ El proyecto denominado **Huerta-IoT** corresponde al trabajo final de la *Especi
 
 # Instrucciones
 
-Para ejecutar en local como un stack de `Docker Swarm` se deben ejecutar `...`.
+Para iniciar el sistema en local como un stack de `Docker Swarm` se deben ejecutar:
 
-Para comprender lo que se realiza es recomendable leer los archivos `README.md` de cada aplicación.
+```
+./crear.sh
+```
 
-Hasta el momento se han configurado las siguientes aplicaciones:
-- Cluster MQTT VerneMQ (https://vernemq.com/).
+Para eliminar el conjunto de aplicaciones de `Docker Swarm` se debe ejecutar:
+
+```
+./eliminar.sh
+```
+
+# Componentes
+
+El sistema está compuesto de las siguientes aplicaciones:
+- Cluster MQTT EMQX (https://www.emqx.io/).
 - Cluster de base de datos CouchDB (https://couchdb.apache.org/).
 - Backend escalable usando fastify (https://www.fastify.io/).
 - Frontend usando Svelte (https://svelte.dev/), Routify (https://routify.dev/) y tailwindcss (https://tailwindcss.com/).
-- Balanceador de carga usando Traefik (https://traefik.io/traefik/).
 
 # Licencia
 

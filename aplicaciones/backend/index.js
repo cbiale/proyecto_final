@@ -8,14 +8,14 @@ const carga = require('under-pressure')
 const path = require('path')
 const entorno = require('fastify-env')
 
-// servidor
-const servidor = fastify({
-  logger: {
-    prettyPrint: true,
-  },
-})
-
 async function inicio() {
+  // servidor
+  const servidor = fastify({
+    logger: {
+      prettyPrint: true,
+    },
+  })
+
   process.on('unhandledRejection', (err) => {
     servidor.log.error(err)
     process.exit(1)
@@ -72,7 +72,7 @@ async function inicio() {
   servidor.register(autoload, (parent) => ({
     dir: path.join(__dirname, 'mqtt'),
     options: {
-      couch: parent.couch
+      couch: parent.couch,
     },
   }))
 
@@ -82,7 +82,7 @@ async function inicio() {
     options: {
       prefix: 'api/v1',
       couch: parent.couch,
-      mqtt: parent.mqtt
+      mqtt: parent.mqtt,
     },
   }))
 
@@ -94,3 +94,5 @@ async function inicio() {
 }
 
 inicio()
+
+module.exports = inicio
