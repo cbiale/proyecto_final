@@ -83,7 +83,7 @@
       dispositivo.reglas = arrayReglasDispositivo
       console.log(dispositivo)
       await dispositivosServicio.modificarDispositivo(dispositivo)
-      $goto('../dashboard')
+      $goto('/admin/dispositivos')
     } catch (err) {
       console.log(err)
     }

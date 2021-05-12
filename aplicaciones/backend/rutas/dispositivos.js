@@ -63,7 +63,8 @@ async function dispositivos(servidor, opciones) {
         parametros.tiempo = parseInt(parametros.tiempo)
         // enviar mensaje MQTT al dispositivo
         let estado = {
-          tiempo: parametros.tiempo,
+          actuador: 'tiempo',
+          valor: parametros.tiempo,
         }
         await mqtt.publish(`tiempo/${id}`, JSON.stringify(estado))
       }

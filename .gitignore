@@ -6,4 +6,4 @@
 /aplicaciones/frontend/node_modules
 /aplicaciones/backend/node_modules
 /aplicaciones/frontend/.routify
-
+/couchdb

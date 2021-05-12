@@ -78,7 +78,7 @@ async function principal() {
       // usar lodash (Referencia: https://markoskon.com/lodash-utilities/)
       mensaje = JSON.parse(mensaje.toString())
       if (topico === topicoTiempo) {
-        tiempo = mensaje.tiempo
+        tiempo = mensaje.valor
         console.log(`Publico tiempo...${JSON.stringify(mensaje)}`)
         cliente.publish(topicoActuadores, JSON.stringify(mensaje))
       }

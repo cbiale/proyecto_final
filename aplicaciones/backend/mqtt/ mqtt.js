@@ -106,7 +106,9 @@ async function conectar(servidor, opciones) {
             await controlarReglas(dispositivo, mensaje)
           }
         } else {
-          servidor.log.error('Control de datos de sensores recibido no superado')
+          servidor.log.error(
+            'Control de datos de sensores recibido no superado',
+          )
         }
       } catch (error) {
         servidor.log.error(error)
@@ -177,7 +179,10 @@ async function conectar(servidor, opciones) {
       // obtengo dispositivo para usarlo en control de datos de mediciones y en reglas
       let dispositivo = await dispositivos.get(dispositivoId)
 
-      if (dispositivo.actuadores.includes(mensaje.actuador)) {
+      if (
+        dispositivo.actuadores.includes(mensaje.actuador) ||
+        mensaje.actuador === 'tiempo'
+      ) {
         servidor.log.info(`Agregando datos recibidos de ${dispositivoId}`)
         try {
           // inserto logs
