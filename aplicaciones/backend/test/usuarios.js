@@ -1,17 +1,11 @@
-'use strict'
+const tap = require('tap')
+const mam = require('../rutas/usuarios.js')
+const nano = require('nano')('http://admin:admin@localhost:5984')
 
-const crearFastify = require('../index')
+obtenerUsuarios(
+tap.pass('Esta bien')
 
-const test = async () => {
-  const app = inicio()
-  
-  const response = await app.inject({
-    method: 'GET',
-    url: '/'
-  })
 
-  console.log('status code: ', response.statusCode)
-  console.log('body: ', response.body)
-}
+ 
 
-test()
+

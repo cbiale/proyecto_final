@@ -94,5 +94,3 @@ async function inicio() {
 }
 
 inicio()
-
-module.exports = inicio

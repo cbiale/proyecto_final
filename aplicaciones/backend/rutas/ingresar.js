@@ -15,7 +15,6 @@ async function ingresar(servidor, opciones) {
     try {
       const { id, password } = parametros
 
-      // const resultado = await r.db('iot').table('usuarios').get(id).run(db)
       const resultado = await usuarios.get(id)
       servidor.log.info(resultado)
       servidor.log.info(resultado.administrador)
@@ -24,16 +23,16 @@ async function ingresar(servidor, opciones) {
         resultado._id === id &&
         (await argon2.verify(resultado.password, password))
       ) {
-        // password match
+        // password es correcto
         // mando respuesta y token
         const token = await respuesta.jwtSign({ id })
         return { estado: 'ok', administrador: resultado.administrador, token }
       } else {
-        // password did not match
+        // password no es correcto
         return { estado: 'error' }
       }
     } catch (error) {
-      throw new Error(error)
+        return { estado: 'error' }
     }
   }
 

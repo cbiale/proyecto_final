@@ -53,7 +53,7 @@
     <div class="mb-4">
       <Label texto='Clave' />
       <Entrada
-        id= 'usuario'
+        id= 'clave'
         ayuda= 'Clave del usuario'
         type="password"
         bind:value={usuario.password} />
