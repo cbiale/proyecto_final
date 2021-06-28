@@ -1,49 +1,49 @@
 'use strict'
 
-async function actuadores(servidor, opciones) {
-    const actuadores = opciones.couch.use('actuadores')
+async function sensores(servidor, opciones) {
+    const sensores = opciones.couch.use('sensores')
 
-    // obtengo los actuadores
-    async function obtenerActuadores() {
+    async function obtenerSensores() {
         try {
-            // obtengo los actuadores
-            const limite = await opciones.couch.db.get('actuadores').doc_count
+            // obtengo los sensores
+            const limite = await opciones.couch.db.get('sensores').doc_count
             const q = {
-                selector: {},
+                selector: {
+                },
                 limit: limite,
             }
-            const resultado = await actuadores.find(q)
+            const resultado = await sensores.find(q)
             return resultado.docs
         } catch (error) {
             throw new Error(error)
         }
     }
 
-    // obtengo un actuador
-    async function obtenerActuador(id) {
+    // obtengo un sensor
+    async function obtenerSensor(id) {
         try {
-            const resultado = await actuadores.get(id)
+            const resultado = await sensores.get(id)
             return resultado
         } catch (error) {
             throw new Error(error)
         }
     }
 
-    // creo un actuador
-    async function crearActuador(parametros) {
+    // creo un sensor
+    async function crearSensor(parametros) {
         try {
             const id = parametros.descripcion.trim().toLowerCase().replace(/\s/g, '-')
             const descripcion =
                 parametros.descripcion.trim().charAt(0).toUpperCase() +
                 parametros.descripcion.trim().slice(1).toLowerCase()
-            const tipo =
-                parametros.tipo.trim().charAt(0).toUpperCase() +
-                parametros.tipo.trim().slice(1).toLowerCase()
+            const metrica =
+                parametros.metrica.trim().charAt(0).toUpperCase() +
+                parametros.metrica.trim().slice(1).toLowerCase()
 
-            const resultado = await actuadores.insert({
+            const resultado = await sensores.insert({
                 _id: id,
                 descripcion: descripcion,
-                tipo: tipo,
+                metrica: metrica,
             })
             return resultado
         } catch (error) {
@@ -51,21 +51,22 @@ async function actuadores(servidor, opciones) {
         }
     }
 
-    // modifico un actuador
-    async function modificarActuador(id, parametros) {
+    // modifico un sensor
+    async function modificarSensor(id, parametros) {
         try {
             const descripcion =
                 parametros.descripcion.trim().charAt(0).toUpperCase() +
                 parametros.descripcion.trim().slice(1).toLowerCase()
-            const tipo =
-                parametros.tipo.trim().charAt(0).toUpperCase() +
-                parametros.tipo.trim().slice(1).toLowerCase()
 
-            const resultado = await actuadores.insert({
+            const metrica =
+                parametros.metrica.charAt(0).trim().toUpperCase() +
+                parametros.metrica.slice(1).trim().toLowerCase()
+
+            const resultado = await sensores.insert({
                 _id: id,
                 _rev: parametros._rev,
                 descripcion: descripcion,
-                tipo: tipo,
+                metrica: metrica,
             })
             return resultado
         } catch (error) {
@@ -73,10 +74,10 @@ async function actuadores(servidor, opciones) {
         }
     }
 
-    // elimino un actuador
-    async function eliminarActuador(id, rev) {
+    // elimino un sensor
+    async function eliminarSensor(id, rev) {
         try {
-            const resultado = await actuadores.destroy(id, rev)
+            const resultado = await sensores.destroy(id, rev)
             return resultado
         } catch (error) {
             throw new Error(error)
@@ -84,4 +85,4 @@ async function actuadores(servidor, opciones) {
     }
 }
 
-module.exports = actuadores
+module.exports = sensores

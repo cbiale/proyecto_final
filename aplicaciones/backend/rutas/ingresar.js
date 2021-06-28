@@ -8,8 +8,6 @@ async function ingresar(servidor, opciones) {
     // obtengo un usuario y comparo su clave
 
     //curl -X POST -H "Content-Type: application/json" -d '{"id": "prueba", "password": "nada"}' http://localhost:3001/api/v1/ingresar
-    //curl -X POST -H "Content-Type: application/json" -d '{"id": "admin", "password": ""}' http://localhost:3001/api/v1/ingresar
-    //curl -X POST -H "Content-Type: application/json" -d '{"id": "admin", "password": "admin"}' http://localhost:3001/api/v1/ingresar
     //curl -X GET -H "Authorization: Bearer {eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluIiwiaWF0IjoxNjEzMDAwMTE3fQ.BhOJF8VHYXj6p31uGRlrlsqrobdtzlAuBWxgdQkm6Eo}" -H "Content-Type: application/json"  http://localhost:3001/api/v1/sensores
     async function obtenerUsuario(parametros, respuesta) {
         try {
@@ -42,6 +40,17 @@ async function ingresar(servidor, opciones) {
     servidor.route({
         url: '/',
         method: 'POST',
+        schema: {
+            body: S.object()
+            .prop('id', S.string().required())
+            .prop('password', S.string().required()),
+        response: {
+              200: S.object()
+              .prop('estado', S.string().required())
+              .prop('administrador', S.string())
+              .prop('token', S.string())
+            }
+          },
         handler: async (request, response) => {
             request.log.info(
                 `Controlando ingreso de usuario, datos: ${JSON.stringify(

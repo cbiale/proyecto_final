@@ -82,6 +82,69 @@ async function actuadores(servidor, opciones) {
             throw new Error(error)
         }
     }
+
+    // defino las rutas
+
+    // obtengo actuadores
+    servidor.route({
+        url: '/',
+        method: 'GET',
+        preValidation: [servidor.autenticar],
+        handler: async (request, response) => {
+            servidor.log.info(`Obteniendo actuadores`)
+            return obtenerActuadores()
+        },
+    })
+
+    // creo un actuador
+    servidor.route({
+        url: '/',
+        method: 'POST',
+        preValidation: [servidor.autenticar],
+        handler: async (request, response) => {
+            request.log.info(
+                `Agregando actuador, datos: ${JSON.stringify(request.body)}`,
+            )
+            return crearActuador(request.body)
+        },
+    })
+
+    // obtengo un actuador
+    servidor.route({
+        url: '/:id',
+        method: 'GET',
+        preValidation: [servidor.autenticar],
+        handler: async (request, response) => {
+            request.log.info(`Obteniendo actuador, id: ${request.params.id}`)
+            return obtenerActuador(request.params.id)
+        },
+    })
+
+    // modifico un actuador
+    servidor.route({
+        url: '/:id',
+        method: 'PUT',
+        preValidation: [servidor.autenticar],
+        handler: async (request, response) => {
+            request.log.info(
+                `Modificando actuador, id: ${request.params.id
+                }, datos: ${JSON.stringify(request.body)}`,
+            )
+            return modificarActuador(request.params.id, request.body)
+        },
+    })
+
+    // elimino un actuador (borrado lógico)
+    servidor.route({
+        url: '/:id',
+        method: 'DELETE',
+        preValidation: [servidor.autenticar],
+        handler: async (request, response) => {
+            servidor.log.info(`Eliminando actuador, id: ${request.params.id} ${JSON.stringify(request.headers._rev)}`)
+            return eliminarActuador(request.params.id, request.headers._rev)
+        },
+    })
 }
 
 module.exports = actuadores
+module.exports.autoPrefix = '/actuadores'
