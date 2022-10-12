@@ -7,5 +7,3 @@
 /aplicaciones/backend/node_modules
 /aplicaciones/frontend/.routify
 /couchdb
-/.vagrant
-.gitignore
