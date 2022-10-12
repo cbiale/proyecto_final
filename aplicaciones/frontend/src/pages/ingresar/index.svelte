@@ -15,7 +15,7 @@
     $goto('/admin/mapa')
   }
 
-    let usuario = {}
+  let usuario = {}
   let mensajeError = ''
 
   async function ingresar() {
