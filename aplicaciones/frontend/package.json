@@ -21,7 +21,7 @@
     "build": "run-s build:*",
     "build:app": "routify -b && rollup -c",
     "build:static": "spank",
-    "serve": "spassr --ssr",
+    "serve": "spassr --ssr --port 5001",
     "rollup": "rollup -cw",
     "nollup": "nollup -c",
     "routify": "routify",

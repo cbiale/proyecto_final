@@ -80,7 +80,7 @@ export default {
       ],
     }),
     replace({
-        'backend_api': production ? 'http://0.0.0.0:3001' : 'http://0.0.0.0:3001'
+        'backend_api': production ? 'http://143.244.152.111:3001' : 'http://0.0.0.0:3001'
       }),
     postcss({
       plugins: [],
