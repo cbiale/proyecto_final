@@ -6,9 +6,9 @@ printf -- "Compilando...\n"
 mos build --platform ESP32
 
 printf -- "\n"
-read -n 1 -s -r -p "Presione enter para continuar cuando a conectado el dispositivo."
+read -n 1 -s -r -p "Presione enter para continuar cuando a conectado el nodo."
 
-printf -- "\n\nCopiando binario al dispositivo...\n"
+printf -- "\n\nCopiando binario al nodo...\n"
 mos flash
 
 printf -- "Configurando WiFi...\n"

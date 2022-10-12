@@ -1,8 +1,9 @@
-
 'use strict'
 
-async function inicio() {
-    const servidor = await require('./app')({
+const build = require('./app')
+
+const inicio = async () => {
+    const servidor = await build({
         logger: {
             prettyPrint: true,
         },

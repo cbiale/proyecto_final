@@ -12,7 +12,7 @@
        mx-auto flex flex-col w-full overflow-y-hidden">
       <nav>
         <Enlace label='Mapa' icono='mapa' enlace='/admin/mapa'/>
-        <Enlace label='Dispositivos' icono='dispositivos' enlace='/admin/dispositivos'/>
+        <Enlace label='Nodos' icono='nodos' enlace='/admin/nodos'/>
         {#if $administrador === true}
             <Enlace label='Sensores' icono='sensores' enlace='/admin/sensores'/>
             <Enlace label='Actuadores' icono='actuadores' enlace='/admin/actuadores'/>

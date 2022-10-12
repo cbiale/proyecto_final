@@ -5,3 +5,4 @@ import leaflet from 'leaflet/dist/leaflet.css'
 const app = HMR(App, { target: document.body }, 'routify-app')
 
 export default app
+

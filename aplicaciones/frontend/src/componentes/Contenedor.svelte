@@ -10,17 +10,18 @@
 </script>
 
 {#if tipo == 'centrado'}
-  <div class="w-full item-center text-center mx-auto">
+  <div class="w-full item-center text-center mx-auto" {...$$restProps}>
     <slot />
   </div>
 {/if}
 {#if tipo == 'justificado'}
-  <div class="flex items-center justify-between">
+  <div class="flex items-center justify-between" {...$$restProps}>
     <slot />
   </div>
 {/if}
 {#if tipo == 'formulario'}
-    <div class="rounded px-2 pt-2 pb-2 mb-2 flex flex-col">
+    <div class="rounded px-2 pt-2 pb-2 mb-2 flex flex-col" {...$$restProps}>
       <slot />
     </div>
 {/if}
+

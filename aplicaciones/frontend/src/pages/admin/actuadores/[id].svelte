@@ -16,7 +16,7 @@
 
   export let id
 
-  // datos dispositivo
+  // datos nodo
   let actuador
   // datos formulario
   let valores = {}

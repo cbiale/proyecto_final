@@ -32,13 +32,12 @@ async function iniciar(servidor, couch) {
 
         // creo las otras bases de datos
         servidor.log.info('Creando bases de datos...')
-        await couch.db.create('dispositivos')
+        await couch.db.create('nodos')
         await couch.db.create('sensores')
         await couch.db.create('actuadores')
         await couch.db.create('mediciones')
         await couch.db.create('logs')
         await couch.db.create('reglas')
-        console.log('Creando vistas')
 
         // creo vistas
         servidor.log.info('Creando vistas...')
@@ -54,7 +53,7 @@ async function iniciar(servidor, couch) {
         }
         await couch.db.use('mediciones').insert(documento)
         await couch.db.use('logs').insert(documento)
-        await couch.db.use('dispositivos').insert(documento)
+        await couch.db.use('nodos').insert(documento)
 
         // creo indices
         servidor.log.info('Creando indices...')

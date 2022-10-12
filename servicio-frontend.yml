@@ -6,8 +6,6 @@ services:
       image: huerta-iot/frontend:1.0
       ports: 
       - 5000:5000
-      environment:
-        IP_HOST: localhost
       networks:
       - huerta_iot_net
   

@@ -25,18 +25,18 @@ async function principal() {
     .epilog('Copyright 2021 - Biale Hermanos S.H.')
     .strict().argv
 
-  // variable Id dispositivo
-  let dispositivoId = argv.id
+  // variable Id nodo
+  let nodoId = argv.id
 
   // Usar un tópico (estado)
   // sensor o actuador : valor
   // Otro tópico (control)
   // actuador : nuevo valor
-  const topicoInicio = `inicio/${dispositivoId}`
-  const topicoTiempo = `tiempo/${dispositivoId}`
-  const topicoSensores = `sensores/${dispositivoId}`
-  const topicoActuadores = `actuadores/${dispositivoId}`
-  const topicoControl = `control/${dispositivoId}`
+  const topicoInicio = `inicio/${nodoId}`
+  const topicoTiempo = `tiempo/${nodoId}`
+  const topicoSensores = `sensores/${nodoId}`
+  const topicoActuadores = `actuadores/${nodoId}`
+  const topicoControl = `control/${nodoId}`
 
   // cliente MQTT
   let cliente
@@ -53,7 +53,7 @@ async function principal() {
   const datos = {
     tiempo: tiempo,
     sensores: ['temperatura-ambiente', 'humedad-suelo', 'humedad-ambiente'],
-    actuadores: ['bomba-de-agua'],
+    actuadores: ['bomba-agua'],
   }
 
   // conexión a broker MQTT

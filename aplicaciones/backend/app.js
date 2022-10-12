@@ -3,19 +3,18 @@
 const fastify = require('fastify')
 const fastifyCors = require('fastify-cors')
 const autoload = require('fastify-autoload')
-const sensible = require('fastify-sensible')
+// const sensible = require('fastify-sensible')
 const carga = require('under-pressure')
 const path = require('path')
 const entorno = require('fastify-env')
 
-module.exports = async function (opciones = {}) {
-    // servidor
+module.exports = async function build (opciones = {}) {
     const servidor = fastify(opciones)
 
-    process.on('unhandledRejection', (err) => {
-        servidor.log.error(err)
-        process.exit(1)
-    })
+//    process.on('unhandledRejection', (err) => {
+//        servidor.log.error(err)
+//        process.exit(1)
+//    })
 
     // habilito cors
     await servidor.register(fastifyCors)
@@ -41,10 +40,10 @@ module.exports = async function (opciones = {}) {
         })
 
     // manejo de errores http
-    await servidor.register(sensible)
+    //await servidor.register(sensible)
 
     await servidor.register(require('fastify-couchdb'), {
-        url: 'http://admin:admin@couchdb:5984',
+        url: process.env.DB_URL || 'http://admin:admin@localhost:5984', // pasar como opciones
     })
 
     // mide la carga del proceso y si la carga supera lo establecido
@@ -65,16 +64,16 @@ module.exports = async function (opciones = {}) {
     }))
 
     // mqtt
-    await servidor.register(autoload, (parent) => ({
-        dir: path.join(__dirname, 'mqtt'),
-        options: {
-            couch: parent.couch,
-        },
-    }))
+//    await servidor.register(autoload, (parent) => ({
+//        dir: path.join(__dirname, 'mqtt'),
+//        options: {
+//            couch: parent.couch,
+//        },
+//    }))
 
     // cargo rutas
     await servidor.register(autoload, (parent) => ({
-        dir: path.join(__dirname, 'rutas'),
+        dir: path.join(__dirname, 'routes'),
         options: {
             prefix: 'api/v1',
             couch: parent.couch,

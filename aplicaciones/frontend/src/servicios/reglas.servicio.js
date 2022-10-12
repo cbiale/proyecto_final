@@ -1,8 +1,8 @@
-import { get } from 'svelte/store'
+        import { get } from 'svelte/store'
 import axios from 'axios'
 import { sesion, backend } from '../store'
 
-const BASE_URL = `http://${backend}:3001/api/v1/reglas`
+const BASE_URL = `${backend}/api/v1/reglas`
 
 let axiosConfig = {
   headers: {

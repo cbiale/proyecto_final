@@ -1,18 +1,21 @@
 load("api_config.js");
 load("api_esp32.js");
 load("api_gpio.js");
-load("api_mqtt.js");
 load("api_sys.js");
+load("api_mqtt.js");
 load("api_timer.js");
 load("api_adc.js");
 load("api_dht.js");
 
+// id
+id = '9892d644b7b377b407b57366af0002ff';
+
 // tópicos MQTT
-let inicio = 'inicio/9892d644b7b377b407b57366af0002ff';
-let tiempo = 'tiempo/9892d644b7b377b407b57366af0002ff';
-let sensores = 'sensores/9892d644b7b377b407b57366af0002ff';
-let actuadores = 'actuadores/9892d644b7b377b407b57366af0002ff';
-let control = 'control/9892d644b7b377b407b57366af0002ff';
+let inicio = 'inicio/' + id;
+let tiempo = 'tiempo/' + id;
+let sensores = 'sensores/' + id;
+let actuadores = 'actuadores/'  + id;
+let control = 'control/' + id;
 
 // pins usados
 let pin1 = 16;

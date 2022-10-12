@@ -6,8 +6,9 @@
   "author": "Claudio Omar Biale",
   "license": "MIT",
   "scripts": {
+    "start":"node index.js",
     "dev": "nodemon -w api index",
-    "test": "tap"
+    "test": "jest --collectCoverage --detectOpenHandles --forceExit"
   },
   "dependencies": {
     "argon2": "^0.27.1",
@@ -24,9 +25,11 @@
     "json-rules-engine": "^6.0.1",
     "lodash": "^4.17.21",
     "pino-pretty": "^4.5.0",
+    "round10": "^1.0.3",
     "under-pressure": "^5.6.0"
   },
   "devDependencies": {
+    "jest": "^28.0.3",
     "nodemon": "^2.0.6"
   }
 }

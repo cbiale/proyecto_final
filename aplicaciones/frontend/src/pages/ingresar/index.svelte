@@ -9,13 +9,13 @@
   import Error from '../../componentes/Error.svelte'
   import axios from 'axios'
 
-  const BASE_URL = `http://${backend}:3001/api/v1/ingresar/`
+  const BASE_URL = `${backend}/api/v1/ingresar/`
 
   if ($sesion) {
     $goto('/admin/mapa')
   }
 
-  let usuario = {}
+    let usuario = {}
   let mensajeError = ''
 
   async function ingresar() {

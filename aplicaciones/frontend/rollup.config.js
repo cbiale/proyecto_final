@@ -12,6 +12,8 @@ import postcssImport from 'postcss-import'
 import { injectManifest } from 'rollup-plugin-workbox'
 import sveltePreprocess from 'svelte-preprocess'
 import postcss from 'rollup-plugin-postcss'
+import json from "@rollup/plugin-json";
+import replace from '@rollup/plugin-replace'
 
 
 const { distDir } = getConfig() // use Routify's distDir for SSOT
@@ -46,6 +48,7 @@ const copyToDist = () => ({
   },
 })
 
+
 export default {
   preserveEntrySignatures: false,
   input: [`src/main.js`],
@@ -76,6 +79,9 @@ export default {
         }),
       ],
     }),
+    replace({
+        'backend_api': production ? 'http://0.0.0.0:3001' : 'http://0.0.0.0:3001'
+      }),
     postcss({
       plugins: [],
       extract: true,
@@ -86,7 +92,7 @@ export default {
       dedupe: (importee) => !!importee.match(/svelte(\/|$)/),
     }),
     commonjs(),
-
+    json(),
     production && terser(),
     !production && !isNollup && serve(),
     !production && !isNollup && livereload(distDir), // refresh entire window when code is updated

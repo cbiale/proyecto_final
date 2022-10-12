@@ -3,10 +3,10 @@
   import { LeafletMap, TileLayer, Marker, Popup } from 'svelte-leafletjs'
   import { onMount } from 'svelte'
   import H2 from '../../../componentes/H2.svelte'
-  import { dispositivosServicio } from '../../../servicios/dispositivos.servicio'
+  import { nodosServicio } from '../../../servicios/nodos.servicio'
 
-  // variable de dispositivos (para mostrar en el mapa)
-  let dispositivos = []
+  // variable de nodos (para mostrar en el mapa)
+  let nodos = []
   let resultado = []
   // centro del mapa
   let centroLatitud
@@ -14,7 +14,7 @@
   let opcionesMapa = {}
 
   onMount(async () => {
-    resultado = await dispositivosServicio.listarDispositivos()
+    resultado = await nodosServicio.listarNodos()
     await centros(resultado)
   })
 
@@ -54,7 +54,7 @@
       zoom: 14,
     }
     console.log(opcionesMapa)
-    dispositivos = resultado
+    nodos = resultado
   }
 
   // figura
@@ -76,23 +76,23 @@
   let mapaLeaflet
 </script>
 
-{#if dispositivos && centroLatitud && centroLongitud}
+{#if nodos && centroLatitud && centroLongitud}
   <LeafletMap bind:this={mapaLeaflet} options={opcionesMapa}>
     <TileLayer url={enlace} options={opcionesCapa} />
-    {#each dispositivos as dispositivo}
-      <Marker latLng={[dispositivo.latitud, dispositivo.longitud]}>
+    {#each nodos as nodo}
+      <Marker latLng={[nodo.latitud, nodo.longitud]}>
         <Popup>
           <center>
-            <b>{dispositivo.denominacion}</b>
-            {#if dispositivo.actuadores || dispositivo.sensores || dispositivo.tiempo}
+            <b>{nodo.denominacion}</b>
+            {#if nodo.actuadores || nodo.sensores || nodo.tiempo}
               <br />
-              <a href="/admin/dispositivos/{dispositivo._id}/dashboard">
+              <a href="/admin/nodos/{nodo._id}/dashboard">
                 ver dashboard
               </a>
             {/if}
             <br />
             {#if $administrador === true}
-              <a href="/admin/dispositivos/{dispositivo._id}">editarlo</a>
+              <a href="/admin/nodos/{nodo._id}">editarlo</a>
             {/if}
           </center>
         </Popup>
@@ -100,5 +100,5 @@
     {/each}
   </LeafletMap>
 {:else}
-  <H2 texto="Sin dispositivos" />
+  <H2 texto="Sin nodos" />
 {/if}

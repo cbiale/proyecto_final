@@ -1,4 +1,4 @@
-<script>
+<!--  --><script>
   import { url } from "@roxi/routify";
   import Contenedor from '../componentes/Contenedor.svelte'
   import H1 from '../componentes/H1.svelte'
