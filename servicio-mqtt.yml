@@ -4,7 +4,7 @@ services:
   emqx:
     image: emqx/emqx:5.0.8
     environment:
-      EMQX_NODE__NAME: "{{.Service.Name}}.{{.Task.Slot}}"
+      EMQX_NODE__NAME: "{{.Service.Name}}@{{.Task.Slot}}"
       EMQX_NODE__COOKIE: emqx-huerta-iot
       EMQX_DASHBOARD__DEFAULT_PASSWORD: 1978-huerta-iot
       EMQX_CLUSTER__DISCOVERY_STRATEGY: manual
