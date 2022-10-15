@@ -3,7 +3,7 @@ version: '3.7'
 services:
     # front-end (usando svelte)
     frontend:
-      image: huerta-iot/frontend:1.0
+      image: cbiale/huerta-iot:frontend-1.0
       ports: 
       - 5001:5001
       networks:

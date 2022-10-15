@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
     backend:
-      image: huerta-iot/backend:1.0
+      image: cbiale/huerta-iot:backend-1.0
       environment:
         MQTT_URL: mqtt://emqx:1883 
         DB_URL: http://admin:admin@couchdb:5984
