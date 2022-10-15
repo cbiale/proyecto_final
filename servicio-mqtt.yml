@@ -3,6 +3,9 @@ version: '3.7'
 services:
   emqx:
     image: emqx/emqx:4.2.11
+      environment:
+        EMQ_NODE_NAME: "{{.Service.Name}}.{{.Task.Slot}}"
+        EMQ_NODE_COOKIE: emqx-huerta-iot
     ports:
       - 1883:1883
       - 8081:8081

@@ -22,7 +22,7 @@ async function principal() {
     .help()
     .alias('help', 'h')
     .alias('version', 'v')
-    .epilog('Copyright 2021 - Biale Hermanos S.H.')
+    .epilog('Copyright 2022 - Biale Hermanos S.H.')
     .strict().argv
 
   // variable Id nodo
@@ -59,7 +59,7 @@ async function principal() {
   // conexión a broker MQTT
   try {
     console.log('Conectando...')
-    cliente = mqtt.connect('mqtt://localhost:1883')
+    cliente = mqtt.connect('mqtt://143.244.152.111:1883')
     console.log('Conectado!')
 
     // suscripciones a cambio de tiempo y actuadores
@@ -84,13 +84,13 @@ async function principal() {
       }
       if (topico === topicoControl) {
         // si el mensaje corresponde al actuador a cambiar
-        if(mensaje.actuador === 'bomba-de-agua') {
+        if(mensaje.actuador === 'bomba-agua') {
             console.log(`${bombaAgua} - ${mensaje.valor}`)
             if (bombaAgua !== mensaje.valor) {
                 bombaAgua = mensaje.valor
                 console.log(`Publico actuador...${JSON.stringify(mensaje)}`)
                 cliente.publish(topicoActuadores, JSON.stringify(mensaje))
-              }      
+              }
         }
       }
     } catch (error) {
@@ -128,10 +128,10 @@ async function principal() {
     } catch (error) {
       console.log('Error al publicar mensaje')
     }
-    setTimeout(enviarDatos, tiempo * 10000)
+    setTimeout(enviarDatos, tiempo * 60000)
   }
 
-  setTimeout(enviarDatos, tiempo * 10000)
+  setTimeout(enviarDatos, tiempo * 60000)
 }
 
 principal()
