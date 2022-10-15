@@ -4,14 +4,9 @@ services:
   emqx:
     image: emqx/emqx:5.0.8
     environment:
-      # EMQX_NODE_NAME: "emqx@{{.Task.Slot}}"
       EMQX_NODE__COOKIE: emqx-huerta-iot
       EMQX_DASHBOARD__DEFAULT_PASSWORD: 1978-huerta-iot
-      EMQX_CLUSTER__DISCOVERY_STRATEGY: mcast
-      EMQX_CLUSTER__MCAST__ADDR: "239.192.0.1"
-      EMQX_CLUSTER__MCAST__PORTS: "4369,4370"
-      EMQX_CLUSTER__MCAST__IFACE: "0.0.0.0"
-      EMQX_CLUSTER__MCAST__TTL: 255
+      EMQX_CLUSTER__DISCOVERY_STRATEGY: manual
     ports:
       - 1883:1883
       - 8081:8081
