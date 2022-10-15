@@ -6,8 +6,8 @@ services:
     environment:
       EMQX_NODE__NAME: "{{.Service.Name}}.{{.Task.Slot}}"
       EMQX_NODE__COOKIE: emqx-huerta-iot
-      EMQX_ADMIN_PASSWORD: 1978-huerta-iot
-      EMQX_CLUSTER__DISCOVERY_STRATEGY: mcast
+      EMQX_DASHBOARD__DEFAULT_PASSWORD: 1978-huerta-iot
+      EMQX_CLUSTER__DISCOVERY_STRATEGY: manual
     ports:
       - 1883:1883
       - 8081:8081
