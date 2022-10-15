@@ -12,7 +12,7 @@ services:
       EMQX_CLUSTER__MCAST__PORTS: "4369,4370"
       EMQX_CLUSTER__MCAST__IFACE: "0.0.0.0"
       EMQX_CLUSTER__MCAST__TTL: 255
-      EMQX_CLUSTER__MCAST__LOOP: "on"      
+      EMQX_CLUSTER__MCAST__LOOP: true      
     ports:
       - 1883:1883
       - 8081:8081
