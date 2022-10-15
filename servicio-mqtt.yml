@@ -8,7 +8,7 @@ services:
       EMQX_DASHBOARD__DEFAULT_PASSWORD: 1978-huerta-iot
       EMQX_CLUSTER__DISCOVERY_STRATEGY: etcd
       EMQX_CLUSTER__ETCD__SERVER: http://etcd:2379
-      EMQX_CLUSTER__ETCD__PREFIX: emqcl
+      EMQX_CLUSTER__ETCD__PREFIX: emqxcl
       EMQX_CLUSTER__ETCD__NODE_TTL: 1m
     ports:
       - 1883:1883
@@ -22,6 +22,8 @@ services:
 
   etcd:
     image: quay.io/coreos/etcd:v3.5.0
+    ports:
+      - 2379:2379
     networks:
       - huerta_iot_net
 
