@@ -46,7 +46,7 @@
             </li>
           </ul>
           <p class="inline-block py-2 px-3 text-gray-200 text-xs">
-            ©2020 Biale Hermanos S.H. Todos los derechos reservados.
+            ©2020-2022 Biale Hermanos S.H. Todos los derechos reservados.
           </p>
         </div>
       </footer>

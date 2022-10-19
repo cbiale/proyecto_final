@@ -1,1 +1,1 @@
-docker build -t huerta-iot/backend:1.0 .
+docker build -t cbiale/huerta-iot:backend-1.0 .
