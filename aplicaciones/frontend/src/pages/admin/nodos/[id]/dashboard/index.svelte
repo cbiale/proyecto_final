@@ -7,10 +7,15 @@
   import { nodosServicio } from '../../../../../servicios/nodos.servicio'
   import { medicionesServicio } from '../../../../../servicios/mediciones.servicio'
   import { logsServicio } from '../../../../../servicios/logs.servicio'
-  import { isEqual, xorWith } from 'lodash'
+  import { isEqual, xorWith, _ } from 'lodash'
+  import Chart from 'svelte-frappe-charts'
+  import dayjs from 'dayjs'
 
   export let id
 
+  let opciones = {
+    hideDots: 1, // default: 0
+  }
   // datos nodo
   let tiempo
   let nodo
@@ -27,6 +32,28 @@
         nodo._id,
         sensor,
       )
+
+      // cambio orden para grafo
+      // creo nuevos arreglos
+      let datosGrafo = valores.datos.slice()
+      let tiempoGrafo = valores.tiempo.slice()
+      // reversa de arreglos
+      _.reverse(datosGrafo)
+      _.reverse(tiempoGrafo)
+      // formato de tiempo en arreglo de tiempo
+      await tiempoGrafo.forEach(function (valor, index) {
+        tiempoGrafo[index] = dayjs(tiempoGrafo[index]).format('HH:mm')
+      })
+      console.log(tiempoGrafo)
+
+      valores.data = {
+        labels: tiempoGrafo,
+        datasets: [
+          {
+            values: datosGrafo,
+          },
+        ],
+      }
       tempo.push(valores)
     }
 
@@ -41,10 +68,7 @@
     tempo = []
     // datos actuadores
     for (let actuador of nodo.actuadores) {
-      const valores = await logsServicio.listarLogsActuador(
-        nodo._id,
-        actuador,
-      )
+      const valores = await logsServicio.listarLogsActuador(nodo._id, actuador)
       tempo.push(valores)
     }
 
@@ -94,12 +118,17 @@
         <p>Sensores:</p>
         {#each valoresSensores as valor}
           <div
-            class="inline-block my-2 mx-2 overflow-hidden rounded shadow-md w-64
+            class="inline-block my-2 mx-2 overflow-hidden rounded shadow-md w-80
             text-center">
             <div class="divide-y divide-green">
               <div class="text-sm text-white font-bold bg-indigo-500">
                 {valor.sensor.descripcion} - {valor.sensor.metrica}
               </div>
+              <Chart
+                data={valor.data}
+                type="line"
+                height="120"
+                lineOptions={opciones} />
               {#each valor.datos as medicion}
                 <div>{medicion}</div>
               {/each}

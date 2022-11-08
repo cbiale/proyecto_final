@@ -63,7 +63,7 @@
         {/if}
       </div>
       <div class="mb-4">
-        <Label texto="Descripción" />
+        <Label texto="Tipo" />
         <Select id="tipo" bind:value={valores.tipo}>
           <option value="On off">On Off</option>
           <option value="Multinivel">Multinivel</option>

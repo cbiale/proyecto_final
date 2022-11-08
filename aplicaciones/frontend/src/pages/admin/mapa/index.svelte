@@ -76,6 +76,8 @@
   let mapaLeaflet
 </script>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 {#if nodos && centroLatitud && centroLongitud}
   <LeafletMap bind:this={mapaLeaflet} options={opcionesMapa}>
     <TileLayer url={enlace} options={opcionesCapa} />

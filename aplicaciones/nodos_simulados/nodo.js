@@ -128,10 +128,10 @@ async function principal() {
     } catch (error) {
       console.log('Error al publicar mensaje')
     }
-    setTimeout(enviarDatos, tiempo * 10000)
+    setTimeout(enviarDatos, tiempo * 60000)
   }
 
-  setTimeout(enviarDatos, tiempo * 10000)
+  setTimeout(enviarDatos, tiempo * 60000)
 }
 
 principal()

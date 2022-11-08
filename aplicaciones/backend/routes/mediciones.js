@@ -40,15 +40,19 @@ async function mediciones(servidor, opciones) {
                     tiempo: { $gt: null },
                 },
                 sort: [{ tiempo: 'desc' }],
-                fields: ['valor'],
+                fields: ['valor', 'tiempo'],
                 limit: 5,
             }
 
             const datos = await mediciones.find(q)
-            const arreglo = datos.docs.map(({ valor }) => valor)
+            console.log(datos)
+            const arregloDatos = datos.docs.map(({ valor }) => valor)
+            const arregloTiempo = datos.docs.map(({ tiempo }) => tiempo)
+
             return {
                 sensor: descripcion,
-                datos: arreglo
+                datos: arregloDatos,
+                tiempo: arregloTiempo
             }
         } catch (error) {
             throw new Error(error)
