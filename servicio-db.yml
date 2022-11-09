@@ -41,3 +41,6 @@ volumes:
 
 # Ver miembros:
 # curl http://admin:password@<setup-coordination-node>:5984/_membership
+
+# https://stackoverflow.com/questions/71779828/how-to-limit-container-running-on-different-node-use-docker-stack-deploy
+# https://stackoverflow.com/questions/48853473/pros-and-cons-of-running-all-docker-swarm-nodes-as-managers
