@@ -14,9 +14,9 @@ services:
       - 8084:8084
       - 8883:8883
       - 18083:18083
-      deploy:
-        placement:
-          max_replicas_per_node: 1
+    deploy:
+      placement:
+        max_replicas_per_node: 1
     networks:
       - huerta_iot_net
 
