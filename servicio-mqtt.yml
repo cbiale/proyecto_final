@@ -15,7 +15,6 @@ services:
       - 8883:8883
       - 18083:18083
       deploy:
-        replicas: 1
         placement:
           max_replicas_per_node: 1
     networks:
