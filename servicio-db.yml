@@ -27,7 +27,7 @@ networks:
 
 volumes:
   couchdb-data:
-    name: "couchdb-.{{.Task.Slot}}"-vol"
+    name: "couchdb-.{{.Task.Slot}}-vol"
 
 # manejo del cluster
 # https://docs.couchdb.org/en/stable/cluster/nodes.html
