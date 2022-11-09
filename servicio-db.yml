@@ -8,7 +8,7 @@ services:
         COUCHDB_USER: "admin"
         COUCHDB_PASSWORD: -pbkdf2-ec6f84b04adce620e9d10512c8a5af9c4fe8379f,8a3bfe04b1f4294d89d9e9d250fce77a,10
         COUCHDB_SECRET: 46d689495ca02e8c35c3a3f683000ef1
-        NODENAME: "couchdb.{{.Task.Slot}}.iot""
+        NODENAME: "couchdb.{{.Task.Slot}}.iot"
         ERL_FLAGS: "-setcookie a20b37d83ef18efce400b3ace400036e"
       volumes:
       - couchdb-data:/opt/couchdb/data
@@ -27,7 +27,7 @@ networks:
 
 volumes:
   couchdb-data:
-    name: 'couchdb-.{{.Task.Slot}}"-vol'
+    name: "couchdb-.{{.Task.Slot}}"-vol"
 
 # manejo del cluster
 # https://docs.couchdb.org/en/stable/cluster/nodes.html
