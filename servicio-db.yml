@@ -6,8 +6,10 @@ services:
       hostname: couchdb.{{.Task.Slot}}.iot
       environment:
         COUCHDB_USER: "admin"
+        COUCHDB_PSW_BASH: "admin"
         COUCHDB_PASSWORD: -pbkdf2-ec6f84b04adce620e9d10512c8a5af9c4fe8379f,8a3bfe04b1f4294d89d9e9d250fce77a,10
-        COUCHDB_SECRET: 46d689495ca02e8c35c3a3f683000ef1
+        COUCHDB_SECRET: "46d689495ca02e8c35c3a3f683000ef1"
+        COUCHDB_UUID: "4e1e9d7c442f5f1fddeca5d082000c78"
         NODENAME: "couchdb.{{.Task.Slot}}.iot"
         ERL_FLAGS: "-setcookie a20b37d83ef18efce400b3ace400036e"
       volumes:
@@ -44,3 +46,7 @@ volumes:
 
 # https://stackoverflow.com/questions/71779828/how-to-limit-container-running-on-different-node-use-docker-stack-deploy
 # https://stackoverflow.com/questions/48853473/pros-and-cons-of-running-all-docker-swarm-nodes-as-managers
+
+# https://github.com/apache/couchdb-docker/issues/74
+
+# https://github.com/apache/couchdb-docker#development-images
