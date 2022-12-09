@@ -4,6 +4,7 @@ const fp = require('fastify-plugin')
 const mqtt = require('async-mqtt')
 const lodash = require('lodash')
 const { includes } = require('lodash')
+const round10 = require('round10').round10;
 
 // conecto a un servidor mqtt
 async function conectar(servidor, opciones) {
@@ -98,7 +99,7 @@ async function conectar(servidor, opciones) {
                             nodo: id,
                             tiempo: tiempo,
                             sensor: clave,
-                            valor: mensaje[clave],
+                            valor: round10(mensaje[clave], -2),
                         })
                     }
                     // controlo las reglas asociadas al nodo

@@ -1,5 +1,5 @@
-author: mongoose-os
-description: A JS-enabled demo Mongoose OS firmware
+author: biale
+description: Nodo sensor y actuador
 # arch: PLATFORM
 version: 1.0
 manifest_version: 2017-05-18
@@ -8,7 +8,8 @@ modules_version: ${mos.version}
 mongoose_os_version: ${mos.version}
 
 config_schema:
-  - ["mqtt.server", "192.168.0.10:1883"]
+  - ["mqtt.enable", true]
+  - ["mqtt.server", "143.244.152.111:1883"]
   - ["i2c.enable", true]
 
 tags:

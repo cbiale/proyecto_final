@@ -15,6 +15,6 @@ printf -- "Configurando WiFi...\n"
 mos wifi Pippe carolina0304
 
 printf -- "Configurando MQTT...\n"
-mos config-set mqtt.enable=true mqtt.server=192.168.0.10:1883
+mos config-set mqtt.enable=true mqtt.server=143.244.152.111:1883
 
 printf -- "----------------------------------------------------------------------------\n"

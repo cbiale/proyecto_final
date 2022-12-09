@@ -2,7 +2,7 @@ const config = require('./configuracion')
 const mqtt = require('async-mqtt')
 
 // variables
-let fastify, cliente, bd
+let fastify, cliente, db
 
 // datos para las pruebas
 const retardoProcesamiento = 2000
@@ -94,7 +94,7 @@ const topicoInicio = `inicio/${nodo._id}`
 async function obtenerLogs(id) {
     try {
         // obtengo los logs
-        const datosLogs = await bd.get('logs').doc_count
+        const datosLogs = await db.get('logs').doc_count
         const q = {
             selector: {
                 nodo: { $eq: id },
@@ -103,7 +103,7 @@ async function obtenerLogs(id) {
             limit: datosLogs,
             sort: [{ tiempo: 'desc' }],
         }
-        const resultado = await bd.use('logs').find(q)
+        const resultado = await db.use('logs').find(q)
         return resultado.docs
     } catch (error) {
         throw new Error(error)
@@ -116,11 +116,11 @@ beforeEach(async () => {
     const respuesta = await config.cargarDatos()
     fastify = respuesta.fastify
     token = respuesta.token
-    bd = fastify.couch.db
-    await bd.use('sensores').insert(sensorUno)
-    await bd.use('sensores').insert(sensorDos)
-    await bd.use('actuadores').insert(actuador)
-    await bd.use('nodos').insert(nodo)
+    db = fastify.couch.db
+    await db.use('sensores').insert(sensorUno)
+    await db.use('sensores').insert(sensorDos)
+    await db.use('actuadores').insert(actuador)
+    await db.use('nodos').insert(nodo)
     cliente = mqtt.connect('mqtt://localhost:1883')
 })
 
@@ -137,7 +137,7 @@ describe('Mqtt', () => {
         await new Promise((r) => setTimeout(r, retardoProcesamiento));
 
         // se obtiene información de la base de datos
-        const datosNodo = await bd.use('nodos').get(nodo._id)
+        const datosNodo = await db.use('nodos').get(nodo._id)
         const datosLogs = await obtenerLogs(nodo._id)
 
         // la información de sensores, actuadores y tiempo debe ser igual a lo enviado

@@ -6,7 +6,7 @@
   "author": "Claudio Omar Biale",
   "license": "MIT",
   "scripts": {
-    "start":"node index.js",
+    "start": "node index.js",
     "dev": "nodemon -w api index",
     "test": "jest --collectCoverage --detectOpenHandles --forceExit"
   },

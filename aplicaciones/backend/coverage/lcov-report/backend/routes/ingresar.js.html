@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">29.41% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/17</span>
+                <span class='fraction'>5/17</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>1/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">29.41% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>17/17</span>
+                <span class='fraction'>5/17</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -122,43 +122,43 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -172,28 +172,28 @@ async function ingresar(servidor, opciones) {
     const usuarios = opciones.couch.use('usuarios')
     
     // obtengo un usuario y comparo su clave
-  async function obtenerUsuario(parametros, respuesta) {
-        try {
-            const { id, password } = parametros
+  async function <span class="fstat-no" title="function not covered" >obtenerUsuario(</span>parametros, respuesta) {
+<span class="cstat-no" title="statement not covered" >        try {</span>
+            const { id, password } = <span class="cstat-no" title="statement not covered" >parametros</span>
 &nbsp;
-            const resultado = await usuarios.get(id)
-            servidor.log.info(resultado)
-            servidor.log.info(resultado.administrador)
+            const resultado = <span class="cstat-no" title="statement not covered" >await usuarios.get(id)</span>
+<span class="cstat-no" title="statement not covered" >            servidor.log.info(resultado)</span>
+<span class="cstat-no" title="statement not covered" >            servidor.log.info(resultado.administrador)</span>
             // si encuentro al usuario
-            if (
+<span class="cstat-no" title="statement not covered" >            if (</span>
                 resultado._id === id &amp;&amp;
                 (await argon2.verify(resultado.password, password))
             ) {
                 // password es correcto
                 // mando respuesta y token
-                const token = await respuesta.jwtSign({ id })
-                return { estado: 'ok', administrador: resultado.administrador, token }
+                const token = <span class="cstat-no" title="statement not covered" >await respuesta.jwtSign({ id })</span>
+<span class="cstat-no" title="statement not covered" >                return { estado: 'ok', administrador: resultado.administrador, token }</span>
             } else {
                 // password no es correcto
-                return { estado: 'error' }
+<span class="cstat-no" title="statement not covered" >                return { estado: 'error' }</span>
             }
         } catch (error) {
-            return { estado: 'error' }
+<span class="cstat-no" title="statement not covered" >            return { estado: 'error' }</span>
         }
     }
 &nbsp;
@@ -203,13 +203,13 @@ async function ingresar(servidor, opciones) {
     servidor.route({
         url: '/',
         method: 'POST',
-        handler: async (request, response) =&gt; {
-            request.log.info(
+        handler: <span class="fstat-no" title="function not covered" >as</span>ync (request, response) =&gt; {
+<span class="cstat-no" title="statement not covered" >            request.log.info(</span>
                 `Controlando ingreso de usuario, datos: ${JSON.stringify(
                     request.body,
                 )}`,
             )
-            return obtenerUsuario(request.body, response)
+<span class="cstat-no" title="statement not covered" >            return obtenerUsuario(request.body, response)</span>
         },
     })
 }
@@ -223,7 +223,7 @@ module.exports.autoPrefix = '/ingresar'
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Aug 18 2022 22:03:23 GMT-0300 (hora estándar de Argentina)
+                at Thu Dec 01 2022 10:58:31 GMT-0300 (hora estándar de Argentina)
             </div>
         <script src="../../prettify.js"></script>
         <script>
