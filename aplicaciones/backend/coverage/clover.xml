@@ -1,58 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1669903112083" clover="3.2.0">
-  <project timestamp="1669903112083" name="All files">
+<coverage generated="1670855572803" clover="3.2.0">
+  <project timestamp="1670855572803" name="All files">
     <metrics statements="481" coveredstatements="118" conditionals="63" coveredconditionals="6" methods="88" coveredmethods="16" elements="632" coveredelements="140" complexity="0" loc="481" ncloc="481" packages="3" files="12" classes="12"/>
     <package name="backend">
       <metrics statements="19" coveredstatements="19" conditionals="5" coveredconditionals="4" methods="4" coveredmethods="4"/>
       <file name="app.js" path="/home/cbiale/Escritorio/proyecto_final/aplicaciones/backend/app.js">
         <metrics statements="19" coveredstatements="19" conditionals="5" coveredconditionals="4" methods="4" coveredmethods="4"/>
-        <line num="3" count="9" type="stmt"/>
-        <line num="4" count="9" type="stmt"/>
-        <line num="5" count="9" type="stmt"/>
-        <line num="7" count="9" type="stmt"/>
-        <line num="8" count="9" type="stmt"/>
-        <line num="9" count="9" type="stmt"/>
-        <line num="11" count="9" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="9" type="stmt"/>
-        <line num="20" count="9" type="stmt"/>
-        <line num="22" count="9" type="stmt"/>
-        <line num="32" count="9" type="stmt"/>
-        <line num="38" count="9" type="cond" truecount="1" falsecount="1"/>
-        <line num="39" count="9" type="stmt"/>
-        <line num="45" count="9" type="stmt"/>
-        <line num="51" count="9" type="stmt"/>
-        <line num="59" count="9" type="stmt"/>
-        <line num="75" count="9" type="stmt"/>
-        <line num="83" count="9" type="stmt"/>
-        <line num="84" count="9" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="38" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+        <line num="83" count="1" type="stmt"/>
+        <line num="84" count="1" type="stmt"/>
       </file>
     </package>
     <package name="backend.plugins">
       <metrics statements="163" coveredstatements="39" conditionals="42" coveredconditionals="2" methods="13" coveredmethods="4"/>
       <file name="autenticar.js" path="/home/cbiale/Escritorio/proyecto_final/aplicaciones/backend/plugins/autenticar.js">
         <metrics statements="8" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <line num="3" count="9" type="stmt"/>
-        <line num="6" count="9" type="stmt"/>
-        <line num="8" count="9" type="stmt"/>
-        <line num="13" count="9" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
-        <line num="26" count="9" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
       </file>
       <file name="db.js" path="/home/cbiale/Escritorio/proyecto_final/aplicaciones/backend/plugins/db.js">
         <metrics statements="32" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="3" count="9" type="stmt"/>
-        <line num="4" count="9" type="stmt"/>
-        <line num="8" count="9" type="stmt"/>
-        <line num="9" count="9" type="stmt"/>
-        <line num="10" count="9" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
-        <line num="19" count="9" type="stmt"/>
-        <line num="20" count="9" type="stmt"/>
-        <line num="22" count="9" type="stmt"/>
-        <line num="23" count="9" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
@@ -71,34 +71,34 @@
         <line num="60" count="0" type="stmt"/>
         <line num="70" count="0" type="stmt"/>
         <line num="71" count="0" type="stmt"/>
-        <line num="74" count="9" type="stmt"/>
-        <line num="76" count="9" type="stmt"/>
-        <line num="80" count="9" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
       </file>
       <file name="mqtt.js" path="/home/cbiale/Escritorio/proyecto_final/aplicaciones/backend/plugins/mqtt.js">
         <metrics statements="123" coveredstatements="22" conditionals="42" coveredconditionals="2" methods="9" coveredmethods="1"/>
-        <line num="3" count="9" type="stmt"/>
-        <line num="4" count="9" type="stmt"/>
-        <line num="5" count="9" type="stmt"/>
-        <line num="6" count="9" type="stmt"/>
-        <line num="7" count="9" type="stmt"/>
-        <line num="11" count="9" type="stmt"/>
-        <line num="12" count="9" type="stmt"/>
-        <line num="13" count="9" type="stmt"/>
-        <line num="14" count="9" type="stmt"/>
-        <line num="15" count="9" type="stmt"/>
-        <line num="16" count="9" type="stmt"/>
-        <line num="18" count="9" type="stmt"/>
-        <line num="19" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="20" count="9" type="stmt"/>
-        <line num="21" count="9" type="stmt"/>
-        <line num="24" count="9" type="stmt"/>
-        <line num="26" count="9" type="stmt"/>
-        <line num="28" count="9" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
-        <line num="34" count="9" type="stmt"/>
-        <line num="36" count="9" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
         <line num="39" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -112,7 +112,7 @@
         <line num="49" count="0" type="stmt"/>
         <line num="52" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
-        <line num="60" count="9" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
         <line num="65" count="0" type="stmt"/>
         <line num="67" count="0" type="stmt"/>
         <line num="70" count="0" type="stmt"/>
@@ -199,14 +199,14 @@
         <line num="311" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="312" count="0" type="stmt"/>
         <line num="323" count="0" type="stmt"/>
-        <line num="329" count="9" type="stmt"/>
+        <line num="329" count="1" type="stmt"/>
       </file>
     </package>
     <package name="backend.routes">
       <metrics statements="299" coveredstatements="60" conditionals="16" coveredconditionals="0" methods="71" coveredmethods="8"/>
       <file name="actuadores.js" path="/home/cbiale/Escritorio/proyecto_final/aplicaciones/backend/routes/actuadores.js">
         <metrics statements="45" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="1"/>
-        <line num="4" count="9" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -234,28 +234,28 @@
         <line num="79" count="0" type="stmt"/>
         <line num="80" count="0" type="stmt"/>
         <line num="82" count="0" type="stmt"/>
-        <line num="89" count="9" type="stmt"/>
+        <line num="89" count="1" type="stmt"/>
         <line num="94" count="0" type="stmt"/>
         <line num="95" count="0" type="stmt"/>
-        <line num="100" count="9" type="stmt"/>
+        <line num="100" count="1" type="stmt"/>
         <line num="105" count="0" type="stmt"/>
         <line num="108" count="0" type="stmt"/>
-        <line num="113" count="9" type="stmt"/>
+        <line num="113" count="1" type="stmt"/>
         <line num="118" count="0" type="stmt"/>
         <line num="119" count="0" type="stmt"/>
-        <line num="124" count="9" type="stmt"/>
+        <line num="124" count="1" type="stmt"/>
         <line num="129" count="0" type="stmt"/>
         <line num="134" count="0" type="stmt"/>
-        <line num="139" count="9" type="stmt"/>
+        <line num="139" count="1" type="stmt"/>
         <line num="144" count="0" type="stmt"/>
         <line num="145" count="0" type="stmt"/>
-        <line num="150" count="9" type="stmt"/>
-        <line num="151" count="9" type="stmt"/>
+        <line num="150" count="1" type="stmt"/>
+        <line num="151" count="1" type="stmt"/>
       </file>
       <file name="ingresar.js" path="/home/cbiale/Escritorio/proyecto_final/aplicaciones/backend/routes/ingresar.js">
         <metrics statements="17" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="1"/>
-        <line num="4" count="9" type="stmt"/>
-        <line num="5" count="9" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
@@ -266,17 +266,17 @@
         <line num="23" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
-        <line num="36" count="9" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
         <line num="40" count="0" type="stmt"/>
         <line num="45" count="0" type="stmt"/>
-        <line num="50" count="9" type="stmt"/>
-        <line num="51" count="9" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
       </file>
       <file name="logs.js" path="/home/cbiale/Escritorio/proyecto_final/aplicaciones/backend/routes/logs.js">
         <metrics statements="24" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="1"/>
-        <line num="4" count="9" type="stmt"/>
-        <line num="5" count="9" type="stmt"/>
-        <line num="6" count="9" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
@@ -290,19 +290,19 @@
         <line num="47" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
         <line num="54" count="0" type="stmt"/>
-        <line num="61" count="9" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
         <line num="66" count="0" type="stmt"/>
         <line num="67" count="0" type="stmt"/>
-        <line num="72" count="9" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
         <line num="77" count="0" type="stmt"/>
         <line num="80" count="0" type="stmt"/>
-        <line num="86" count="9" type="stmt"/>
-        <line num="87" count="9" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
+        <line num="87" count="1" type="stmt"/>
       </file>
       <file name="mediciones.js" path="/home/cbiale/Escritorio/proyecto_final/aplicaciones/backend/routes/mediciones.js">
         <metrics statements="26" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="1"/>
-        <line num="4" count="9" type="stmt"/>
-        <line num="5" count="9" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
@@ -319,19 +319,19 @@
         <line num="50" count="0" type="stmt"/>
         <line num="52" count="0" type="stmt"/>
         <line num="58" count="0" type="stmt"/>
-        <line num="65" count="9" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
         <line num="70" count="0" type="stmt"/>
         <line num="71" count="0" type="stmt"/>
-        <line num="76" count="9" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
         <line num="81" count="0" type="stmt"/>
         <line num="84" count="0" type="stmt"/>
-        <line num="89" count="9" type="stmt"/>
-        <line num="90" count="9" type="stmt"/>
+        <line num="89" count="1" type="stmt"/>
+        <line num="90" count="1" type="stmt"/>
       </file>
       <file name="nodos.js" path="/home/cbiale/Escritorio/proyecto_final/aplicaciones/backend/routes/nodos.js">
         <metrics statements="51" coveredstatements="9" conditionals="10" coveredconditionals="0" methods="11" coveredmethods="1"/>
-        <line num="4" count="9" type="stmt"/>
-        <line num="5" count="9" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
@@ -364,27 +364,27 @@
         <line num="93" count="0" type="stmt"/>
         <line num="94" count="0" type="stmt"/>
         <line num="96" count="0" type="stmt"/>
-        <line num="103" count="9" type="stmt"/>
+        <line num="103" count="1" type="stmt"/>
         <line num="108" count="0" type="stmt"/>
         <line num="109" count="0" type="stmt"/>
-        <line num="114" count="9" type="stmt"/>
+        <line num="114" count="1" type="stmt"/>
         <line num="119" count="0" type="stmt"/>
         <line num="122" count="0" type="stmt"/>
-        <line num="127" count="9" type="stmt"/>
+        <line num="127" count="1" type="stmt"/>
         <line num="132" count="0" type="stmt"/>
         <line num="133" count="0" type="stmt"/>
-        <line num="138" count="9" type="stmt"/>
+        <line num="138" count="1" type="stmt"/>
         <line num="143" count="0" type="stmt"/>
         <line num="147" count="0" type="stmt"/>
-        <line num="152" count="9" type="stmt"/>
+        <line num="152" count="1" type="stmt"/>
         <line num="157" count="0" type="stmt"/>
         <line num="162" count="0" type="stmt"/>
-        <line num="167" count="9" type="stmt"/>
-        <line num="168" count="9" type="stmt"/>
+        <line num="167" count="1" type="stmt"/>
+        <line num="168" count="1" type="stmt"/>
       </file>
       <file name="reglas.js" path="/home/cbiale/Escritorio/proyecto_final/aplicaciones/backend/routes/reglas.js">
         <metrics statements="42" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="1"/>
-        <line num="4" count="9" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -409,27 +409,27 @@
         <line num="73" count="0" type="stmt"/>
         <line num="74" count="0" type="stmt"/>
         <line num="76" count="0" type="stmt"/>
-        <line num="83" count="9" type="stmt"/>
+        <line num="83" count="1" type="stmt"/>
         <line num="88" count="0" type="stmt"/>
         <line num="89" count="0" type="stmt"/>
-        <line num="94" count="9" type="stmt"/>
+        <line num="94" count="1" type="stmt"/>
         <line num="99" count="0" type="stmt"/>
         <line num="102" count="0" type="stmt"/>
-        <line num="107" count="9" type="stmt"/>
+        <line num="107" count="1" type="stmt"/>
         <line num="112" count="0" type="stmt"/>
         <line num="113" count="0" type="stmt"/>
-        <line num="118" count="9" type="stmt"/>
+        <line num="118" count="1" type="stmt"/>
         <line num="123" count="0" type="stmt"/>
         <line num="128" count="0" type="stmt"/>
-        <line num="133" count="9" type="stmt"/>
+        <line num="133" count="1" type="stmt"/>
         <line num="138" count="0" type="stmt"/>
         <line num="143" count="0" type="stmt"/>
-        <line num="148" count="9" type="stmt"/>
-        <line num="149" count="9" type="stmt"/>
+        <line num="148" count="1" type="stmt"/>
+        <line num="149" count="1" type="stmt"/>
       </file>
       <file name="sensores.js" path="/home/cbiale/Escritorio/proyecto_final/aplicaciones/backend/routes/sensores.js">
         <metrics statements="45" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="1"/>
-        <line num="4" count="9" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
@@ -457,28 +457,28 @@
         <line num="80" count="0" type="stmt"/>
         <line num="81" count="0" type="stmt"/>
         <line num="83" count="0" type="stmt"/>
-        <line num="90" count="9" type="stmt"/>
+        <line num="90" count="1" type="stmt"/>
         <line num="95" count="0" type="stmt"/>
         <line num="96" count="0" type="stmt"/>
-        <line num="101" count="9" type="stmt"/>
+        <line num="101" count="1" type="stmt"/>
         <line num="106" count="0" type="stmt"/>
         <line num="109" count="0" type="stmt"/>
-        <line num="114" count="9" type="stmt"/>
+        <line num="114" count="1" type="stmt"/>
         <line num="119" count="0" type="stmt"/>
         <line num="120" count="0" type="stmt"/>
-        <line num="125" count="9" type="stmt"/>
+        <line num="125" count="1" type="stmt"/>
         <line num="130" count="0" type="stmt"/>
         <line num="135" count="0" type="stmt"/>
-        <line num="140" count="9" type="stmt"/>
+        <line num="140" count="1" type="stmt"/>
         <line num="145" count="0" type="stmt"/>
         <line num="146" count="0" type="stmt"/>
-        <line num="151" count="9" type="stmt"/>
-        <line num="152" count="9" type="stmt"/>
+        <line num="151" count="1" type="stmt"/>
+        <line num="152" count="1" type="stmt"/>
       </file>
       <file name="usuarios.js" path="/home/cbiale/Escritorio/proyecto_final/aplicaciones/backend/routes/usuarios.js">
         <metrics statements="49" coveredstatements="9" conditionals="2" coveredconditionals="0" methods="11" coveredmethods="1"/>
-        <line num="4" count="9" type="stmt"/>
-        <line num="7" count="9" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
@@ -509,23 +509,23 @@
         <line num="81" count="0" type="stmt"/>
         <line num="82" count="0" type="stmt"/>
         <line num="84" count="0" type="stmt"/>
-        <line num="91" count="9" type="stmt"/>
+        <line num="91" count="1" type="stmt"/>
         <line num="96" count="0" type="stmt"/>
         <line num="97" count="0" type="stmt"/>
-        <line num="102" count="9" type="stmt"/>
+        <line num="102" count="1" type="stmt"/>
         <line num="107" count="0" type="stmt"/>
         <line num="110" count="0" type="stmt"/>
-        <line num="115" count="9" type="stmt"/>
+        <line num="115" count="1" type="stmt"/>
         <line num="120" count="0" type="stmt"/>
         <line num="121" count="0" type="stmt"/>
-        <line num="126" count="9" type="stmt"/>
+        <line num="126" count="1" type="stmt"/>
         <line num="131" count="0" type="stmt"/>
         <line num="136" count="0" type="stmt"/>
-        <line num="141" count="9" type="stmt"/>
+        <line num="141" count="1" type="stmt"/>
         <line num="146" count="0" type="stmt"/>
         <line num="147" count="0" type="stmt"/>
-        <line num="152" count="9" type="stmt"/>
-        <line num="153" count="9" type="stmt"/>
+        <line num="152" count="1" type="stmt"/>
+        <line num="153" count="1" type="stmt"/>
       </file>
     </package>
   </project>

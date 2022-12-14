@@ -6,7 +6,6 @@ load("api_mqtt.js");
 load("api_timer.js");
 load("api_adc.js");
 load("api_dht.js");
-load('api_rpc.js');
 
 // id
 let id = '30a9137e411b3b0e96428db025000217';
